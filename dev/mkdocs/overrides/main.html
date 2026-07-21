@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{#
+  Override do tema Material só para o BANNER de topo (announce bar) -- ver
+  CLAUDE.md §8.5. Sem a feature `announce.dismiss` nas theme.features, o banner
+  é PERMANENTE (não tem botão de fechar). Conteúdo estático (renderizado no
+  build), então funciona igual online (GitHub Pages) e offline (file:// no zip).
+
+  Seletor de idioma NÃO mora mais aqui (revisão 2026-07-19, ver §8.8) -- foi
+  pro cabeçalho principal, via o mecanismo nativo `extra.alternate` do
+  Material (ícone de tradução com submenu) -- ver overrides/partials/alternate.html.
+#}
+{% block announce %}
+<div class="dev-banner" role="note">
+  <span class="dev-banner__tag">Em desenvolvimento</span>
+  Este guia acompanha o <strong>pacote de testes</strong> — guia e pacote ainda estão em construção.
+</div>
+{% endblock %}

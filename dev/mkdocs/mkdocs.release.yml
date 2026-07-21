@@ -1,0 +1,66 @@
+# Variante de build para o ZIP de release -- herda TUDO de mkdocs.yml
+# (INHERIT) e sobrescreve só o que precisa ser diferente para funcionar
+# aberto via file:// (clique duplo, sem servidor). Ver CLAUDE.md §8.3.
+#
+# Uso (feito por scripts/assemble_release.ps1, não pelo dia a dia de edição):
+#   python -m mkdocs build -f mkdocs.release.yml -d site-release
+#
+# Para editar/revisar o guia no dia a dia, continue usando o mkdocs.yml
+# normal (`python -m mkdocs serve`) -- esta config é só para empacotar.
+
+INHERIT: mkdocs.yml
+
+# false é essencial aqui: o guia é distribuído dentro do zip de release e
+# aberto por clique duplo em guia-de-uso/index.html (protocolo file://, sem
+# servidor). Com o padrão (true, herdado de mkdocs.yml), os links viram
+# pastas ("planilha/") que o navegador não resolve sozinho para o index.html
+# de dentro sem um servidor -- confirmado quebrando ao testar. Com false, os
+# links viram arquivos .html diretos ("planilha/index.html").
+use_directory_urls: false
+
+# Busca desabilitada de propósito (decisão de 2026-07-19, testada no
+# navegador): o mecanismo de busca do mkdocs-material carrega o índice via
+# Web Worker + fetch() -- isso é bloqueado sob file://, e a caixa de busca
+# fica travada em "Inicializando a pesquisa" pra sempre, sem erro visível
+# pro usuário. No mkdocs.yml normal (GitHub Pages, servidor http real) a
+# busca continua ligada -- essa troca vale só para esta variante.
+plugins:
+  - search:
+      enabled: false
+
+# "Baixe o pacote" só faz sentido pra quem está lendo online e ainda não tem
+# o zip -- dentro do próprio zip já baixado seria circular. exclude_docs
+# tira o arquivo fonte da build inteira (nem gera o .html órfão).
+exclude_docs: |
+  baixe-o-pacote.md
+
+# nav completo redeclarado (INHERIT não faz merge parcial de listas) --
+# igual ao de mkdocs.yml, MENOS a entrada "Baixe o pacote".
+nav:
+  - Introdução: index.md
+  - Comece por aqui: test-drive.md
+  - 1. Planilha (metadados):
+      - Visão geral: planilha/index.md
+      - Requisitos e desbloqueio: planilha/requisitos-desbloqueio.md
+      - Usando o menu: planilha/usando-o-menu.md
+      - A pasta de leituras (readings/): planilha/pasta-de-leituras.md
+      - Dicionário de campos: planilha/dicionario-de-campos.md
+  - 2. Coleta:
+      - Visão geral: coleta/index.md
+      - Correspondência planilha ↔ leituras: coleta/correspondencia-arquivos.md
+      - "Coleta real: iHerbSpec + InnoSpectra + INPA": coleta/exemplo-inpa.md
+  - 3. Conversão (Parser):
+      - Visão geral: parser/index.md
+      - Passo a passo: parser/passo-a-passo.md
+  - 4. Artefato de saída:
+      - Visão geral: saida/index.md
+      - Estrutura de pastas: saida/estrutura-pastas.md
+      - Scripts de importação (Python e R): saida/scripts-de-importacao.md
+      - "Relatório de sucesso (RELATORIO.html)": saida/relatorio-sucesso.md
+      - Relatório de rejeição: saida/relatorio-rejeicao.md
+      - Limitações conhecidas: saida/limitacoes.md
+  - Perguntas frequentes: faq.md
+  - Glossário: glossario.md
+  - Feedback: feedback.md
+  - Notas de versão: changelog.md
+  - Licenciamento: licenca.md

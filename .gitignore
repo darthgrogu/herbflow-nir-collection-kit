@@ -1,0 +1,24 @@
+# As duas aplicações são repos git independentes, versionados nos seus próprios
+# históricos — este repo (empacotamento/distribuição) não os absorve nem os trata
+# como submodule. Ver CLAUDE.md.
+herbflow-excel/
+pytkinter_iherbspec_parser/
+
+# Saída do script de empacotamento — build output, não é fonte.
+release/
+
+# Saída do build do MkDocs — build output, não é fonte.
+# site/         = variante online (mkdocs.yml normal, URLs limpas, busca ligada)
+# site-release/ = variante offline (mkdocs.release.yml, o que vai pro zip)
+site/
+site-release/
+
+# SO / editor
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# CLAUDE.md ainda em refinamento antes de ser publicado como documentação para
+# devs (decisão de 2026-07-21) -- fica de fora do repo por ora (continua
+# existindo localmente, só não é mais rastreado por este .git).
+CLAUDE.md

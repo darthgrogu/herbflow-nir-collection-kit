@@ -1,0 +1,159 @@
+site_name: Guia de uso — herbflow
+site_description: Guia de uso do herbflow — planilha de coleta, organização das leituras e gerador de artefato.
+site_dir: site
+docs_dir: docs
+
+# Esta é a config "normal" -- URLs limpas (padrão), busca ligada. Usada por
+# `mkdocs serve`/`mkdocs build` (edição local) e pelo futuro deploy no
+# GitHub Pages (`mkdocs gh-deploy`), onde um servidor http de verdade serve
+# o site. Para o zip de release (aberto via file://, sem servidor), existe
+# uma config IRMÃ, mkdocs.release.yml, que HERDA esta (INHERIT) e só
+# sobrescreve o que precisa ser diferente -- ver CLAUDE.md §8.3.
+
+# Usuário GitHub confirmado pelo mantenedor (2026-07-19): darthgrogu, usado
+# inicialmente pra testar/validar a publicação -- pode migrar pra uma conta/
+# organização diferente mais adiante, ver CLAUDE.md §5.
+repo_url: https://github.com/darthgrogu/herbflow-nir-collection-kit
+repo_name: herbflow-nir-collection-kit
+edit_uri: edit/main/docs/ # branch padrão deste repo é "main", não "master" (default do mkdocs)
+site_url: https://darthgrogu.github.io/herbflow-nir-collection-kit/
+
+theme:
+  name: material
+  language: pt
+  custom_dir: overrides # override do bloco `announce` (banner "em desenvolvimento" + select de idioma), ver overrides/main.html
+  font: false # evita depender de Google Fonts no build -- offline-first mesmo na hora de gerar a doc
+  palette:
+    # Verde floresta (decisão de 2026-07-19, ver §8.8): "green"/"accent: green"
+    # são as chaves VÁLIDAS mais próximas no vocabulário do Material -- os
+    # valores de cor de verdade (tons mais escuros/terrosos que o verde padrão
+    # do tema) são sobrescritos em assets/stylesheets/extra.css, mirando
+    # exatamente [data-md-color-primary="green"]/[data-md-color-accent="green"].
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    # SEM navigation.expand nem navigation.sections de propósito (revisão de
+    # 2026-07-19, ver §8.8): as duas forçavam o menu a reabrir por completo
+    # toda vez, brigando com qualquer colapso manual do usuário. Sem elas,
+    # cada seção é um acordeão de verdade -- só a seção da página atual abre
+    # sozinha (para dar contexto de onde você está), o resto respeita o que
+    # foi clicado. O "abre tudo na primeira visita" fica por conta de JS em
+    # nav-zones.js (só a zona do fluxo, só uma vez, via localStorage).
+    - navigation.indexes  # clicar no título da seção abre a página de visão geral dela
+    - navigation.top      # botão "voltar ao topo"
+    - navigation.footer   # botões "próxima página / página anterior" no rodapé -- reforça
+                           # a leitura como um fluxo sequencial, que é a intenção do guia
+    - navigation.path     # "page tree"/breadcrumb entre o cabeçalho e o conteúdo (nativo do
+                           # Material) -- puramente estático (renderizado no build), funciona
+                           # offline igual online
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit # botão "editar esta página" -- só faz sentido com repo_url/edit_uri
+                           # já definidos acima; visível nas duas variantes, mas só é útil na
+                           # online (na release, offline, clicar levaria a um link externo --
+                           # inofensivo, só menos útil ali)
+    # NÃO usar navigation.instant nem navigation.instant.prefetch: essas
+    # features carregam páginas via fetch() em vez de navegação normal --
+    # quebrariam a variante de release (aberta via file://, sem servidor).
+    # Como as duas configs compartilham este bloco `theme.features` via
+    # INHERIT, a restrição vale aqui mesmo a busca estando ligada nesta
+    # config específica.
+
+# Seletor de idioma no cabeçalho principal (ícone de tradução + submenu),
+# mecanismo NATIVO do Material -- ver overrides/partials/alternate.html
+# (adiciona suporte a `disabled: true`, já que só pt-BR está pronto).
+extra:
+  alternate:
+    - name: Português (BR)
+      link: .
+      lang: pt-BR
+    - name: English — soon
+      link: "#"
+      lang: en
+      disabled: true
+    - name: Español — pronto
+      link: "#"
+      lang: es
+      disabled: true
+    - name: Français — bientôt
+      link: "#"
+      lang: fr
+      disabled: true
+
+plugins:
+  - search
+
+# CSS/JS próprios (herdados por mkdocs.release.yml via INHERIT). Caminhos
+# relativos a docs_dir -- copiados para o site no build, funcionam offline.
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/nav-zones.js
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - def_list # sintaxe "Termo\n: definição" -- usada no Glossário e no FAQ
+  - pymdownx.emoji: # habilita ícones Material (:material-xxx:) no nav e no conteúdo
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  # Sem ícones aqui de propósito: ícone no rótulo do nav exigiria o plugin
+  # "typeset" do mkdocs-material, que troca o rótulo pelo H1 real da página
+  # -- brigaria com a numeração curta ("1. Planilha" viraria o título cheio
+  # da página). Ícones continuam disponíveis no CONTEÚDO (ex.: os cartões da
+  # homepage já usam, ver docs/index.md) via pymdownx.emoji, só não no nav.
+  #
+  # Esta lista é DUPLICADA (com uma exceção) em mkdocs.release.yml -- INHERIT
+  # não faz merge parcial de listas, então a variante de release precisa
+  # redeclarar o nav inteiro pra poder omitir "Baixe o pacote" (não faz
+  # sentido dentro do zip já baixado). Ao adicionar/mover página aqui,
+  # replicar lá também.
+  - Introdução: index.md
+  - "⬇️ Baixe o pacote": baixe-o-pacote.md
+  - Comece por aqui: test-drive.md
+  - 1. Planilha (metadados):
+      - Visão geral: planilha/index.md
+      - Requisitos e desbloqueio: planilha/requisitos-desbloqueio.md
+      - Usando o menu: planilha/usando-o-menu.md
+      - A pasta de leituras (readings/): planilha/pasta-de-leituras.md
+      - Dicionário de campos: planilha/dicionario-de-campos.md
+  - 2. Coleta:
+      - Visão geral: coleta/index.md
+      - Correspondência planilha ↔ leituras: coleta/correspondencia-arquivos.md
+      - "Coleta real: iHerbSpec + InnoSpectra + INPA": coleta/exemplo-inpa.md
+  - 3. Conversão (Parser):
+      - Visão geral: parser/index.md
+      - Passo a passo: parser/passo-a-passo.md
+  - 4. Artefato de saída:
+      - Visão geral: saida/index.md
+      - Estrutura de pastas: saida/estrutura-pastas.md
+      - Scripts de importação (Python e R): saida/scripts-de-importacao.md
+      - "Relatório de sucesso (RELATORIO.html)": saida/relatorio-sucesso.md
+      - Relatório de rejeição: saida/relatorio-rejeicao.md
+      - Limitações conhecidas: saida/limitacoes.md
+  - Perguntas frequentes: faq.md
+  - Glossário: glossario.md
+  - Feedback: feedback.md
+  - Notas de versão: changelog.md
+  - Licenciamento: licenca.md

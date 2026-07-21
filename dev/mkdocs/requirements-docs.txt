@@ -1,0 +1,11 @@
+# Dependências só para BUILDAR a documentação (mkdocs).
+# Sem relação com o .exe do parser nem com nada distribuído ao testador --
+# isto roda só na máquina de quem edita/publica o guia.
+#
+# Uso:
+#   pip install -r requirements-docs.txt
+#   python -m mkdocs build     # gera site/
+#   python -m mkdocs serve     # preview local em http://127.0.0.1:8000
+
+mkdocs==1.6.1
+mkdocs-material==9.7.7

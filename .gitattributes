@@ -1,0 +1,10 @@
+# Normaliza quebras de linha no repositório (LF), independente do SO de quem
+# clona/edita — evita o ruído de conversão CRLF/LF ao aceitar colaboração de
+# fora (Windows/Mac/Linux) depois que o repo for público.
+* text=auto eol=lf
+
+# Binário — nunca aplicar conversão de linha nem diff textual.
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
