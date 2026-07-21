@@ -1,0 +1,41 @@
+<svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estrutura de pastas de entrada e dos dois artefatos de saida">
+  <defs>
+    <marker id="arrow-saida" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b9bc3"/>
+    </marker>
+  </defs>
+  <style>
+    .panel { fill: #f8fafb; stroke: #ccc; stroke-width: 1.5; }
+    .title { font-family: -apple-system, Segoe UI, Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #222; }
+    .tree { font-family: 'Courier New', monospace; font-size: 12.5px; fill: #333; }
+    .arrow { stroke: #6b9bc3; stroke-width: 2; fill: none; marker-end: url(#arrow-saida); }
+  </style>
+
+  <rect class="panel" x="10" y="10" width="330" height="320" rx="8"/>
+  <text class="title" x="30" y="35">Entrada</text>
+  <text class="tree" x="30" y="65">metadata.xlsm</text>
+  <text class="tree" x="30" y="85">readings/</text>
+  <text class="tree" x="45" y="105">sessao_1/</text>
+  <text class="tree" x="60" y="125">leitura_A.csv</text>
+  <text class="tree" x="60" y="143">leitura_B.csv</text>
+  <text class="tree" x="45" y="163">sessao_2/ (opcional)</text>
+  <text class="tree" x="60" y="183">leitura_C.asd</text>
+
+  <path class="arrow" d="M345,170 L385,170"/>
+
+  <rect class="panel" x="400" y="10" width="490" height="150" rx="8"/>
+  <text class="title" x="420" y="35">artefato_iherbspec_rawfiles/</text>
+  <text class="tree" x="420" y="60">metadata.xlsx</text>
+  <text class="tree" x="420" y="80">sessions/</text>
+  <text class="tree" x="435" y="100">sessao_1/</text>
+  <text class="tree" x="450" y="120">PI..._TCAB_0001.csv (renomeado)</text>
+  <text class="tree" x="450" y="138">— conteúdo original intocado</text>
+
+  <rect class="panel" x="400" y="180" width="490" height="150" rx="8"/>
+  <text class="title" x="420" y="205">artefato_iherbspec_cleaned/</text>
+  <text class="tree" x="420" y="230">metadata.xlsx</text>
+  <text class="tree" x="420" y="250">sessions/</text>
+  <text class="tree" x="435" y="270">sessao_1/</text>
+  <text class="tree" x="450" y="290">PI..._TCAB_0001.csv (unificado)</text>
+  <text class="tree" x="450" y="308">— sem cabeçalho do fabricante</text>
+</svg>

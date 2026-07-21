@@ -1,0 +1,1902 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia de uso do herbflow — planilha de coleta, organização das leituras e gerador de artefato.">
+      
+      
+      
+        <link rel="canonical" href="https://darthgrogu.github.io/herbflow-nir-collection-kit/planilha/dicionario-de-campos/">
+      
+      
+        <link rel="prev" href="../pasta-de-leituras/">
+      
+      
+        <link rel="next" href="../../coleta/">
+      
+      
+        
+          <link rel="alternate" href="../.." hreflang="pt-BR">
+        
+          <link rel="alternate" href="#" hreflang="en">
+        
+          <link rel="alternate" href="#" hreflang="es">
+        
+          <link rel="alternate" href="#" hreflang="fr">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Dicionário de campos - Guia de uso — herbflow</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dicionario-de-campos" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div class="dev-banner" role="note">
+  <span class="dev-banner__tag">Em desenvolvimento</span>
+  Este guia acompanha o <strong>pacote de testes</strong> — guia e pacote ainda estão em construção.
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Guia de uso — herbflow" class="md-header__button md-logo" aria-label="Guia de uso — herbflow" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guia de uso — herbflow
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dicionário de campos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      
+<div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            
+              <a href="../.." hreflang="pt-BR" class="md-select__link md-select__link--current">
+                Português (BR)
+              </a>
+            
+          </li>
+        
+          <li class="md-select__item">
+            
+              <span class="md-select__link md-select__link--disabled" aria-disabled="true">
+                English — soon
+              </span>
+            
+          </li>
+        
+          <li class="md-select__item">
+            
+              <span class="md-select__link md-select__link--disabled" aria-disabled="true">
+                Español — pronto
+              </span>
+            
+          </li>
+        
+          <li class="md-select__item">
+            
+              <span class="md-select__link md-select__link--disabled" aria-disabled="true">
+                Français — bientôt
+              </span>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/darthgrogu/herbflow-nir-collection-kit" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    herbflow-nir-collection-kit
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guia de uso — herbflow" class="md-nav__button md-logo" aria-label="Guia de uso — herbflow" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Guia de uso — herbflow
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/darthgrogu/herbflow-nir-collection-kit" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    herbflow-nir-collection-kit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../baixe-o-pacote/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⬇️ Baixe o pacote
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-drive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comece por aqui
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Planilha (metadados)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Planilha (metadados)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos-desbloqueio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos e desbloqueio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usando-o-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pasta-de-leituras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A pasta de leituras (readings/)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de campos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de campos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#campos-preenchidos-por-leitura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos preenchidos por leitura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#campos-preenchidos-automaticamente-sessao-geracao-de-nome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos preenchidos automaticamente (sessão + geração de nome)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-campo-do-protocolo-e-o-que-e-proprio-do-herbflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é campo do protocolo e o que é próprio do HerbFlow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#novidades-recentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Novidades recentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../coleta/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Coleta
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Coleta
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coleta/correspondencia-arquivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correspondência planilha ↔ leituras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coleta/exemplo-inpa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coleta real: iHerbSpec + InnoSpectra + INPA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../parser/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Conversão (Parser)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Conversão (Parser)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parser/passo-a-passo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passo a passo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../saida/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Artefato de saída
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Artefato de saída
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saida/estrutura-pastas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estrutura de pastas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saida/scripts-de-importacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripts de importação (Python e R)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saida/relatorio-sucesso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório de sucesso (RELATORIO.html)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saida/relatorio-rejeicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório de rejeição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saida/limitacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitações conhecidas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perguntas frequentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de versão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../licenca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licenciamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#campos-preenchidos-por-leitura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos preenchidos por leitura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#campos-preenchidos-automaticamente-sessao-geracao-de-nome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos preenchidos automaticamente (sessão + geração de nome)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-campo-do-protocolo-e-o-que-e-proprio-do-herbflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é campo do protocolo e o que é próprio do HerbFlow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#novidades-recentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Novidades recentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegação" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Introdução
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    1. Planilha (metadados)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/darthgrogu/herbflow-nir-collection-kit/edit/main/docs/planilha/dicionario-de-campos.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="dicionario-de-campos">Dicionário de campos<a class="headerlink" href="#dicionario-de-campos" title="Permanent link">&para;</a></h1>
+<p>Esta página lista todos os campos da planilha de metadados, com a mesma
+descrição usada pela planilha em si — o menu <strong>Comentários dos Campos</strong>
+(ver <a href="../usando-o-menu/">Usando o menu iHerbSpec</a>) aplica exatamente estes
+textos como Nota do Excel em cada cabeçalho de coluna, em três idiomas
+(Português, Español, English). Aqui só a versão em português está reunida
+num só lugar, junto com o protocolo de origem de cada campo.</p>
+<div class="admonition info">
+<p class="admonition-title">Base do protocolo</p>
+<p>A planilha segue o <strong>iHerbSpec Protocol v1.2.1</strong>. A maioria dos campos
+vem diretamente dele; alguns poucos são campos próprios do HerbFlow/INPA,
+sinalizados na coluna <strong>Protocolo</strong> abaixo.</p>
+</div>
+<h2 id="campos-preenchidos-por-leitura">Campos preenchidos por leitura<a class="headerlink" href="#campos-preenchidos-por-leitura" title="Permanent link">&para;</a></h2>
+<p>Estes campos variam linha a linha, conforme o espécime/tecido/classe de
+alvo de cada leitura — a maioria é preenchida automaticamente pelo motor de
+expansão de lote (<strong>Criar Tabela por LOTE</strong>), a partir do que você configura
+em <strong>Gerenciar Espécimes</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Protocolo</th>
+<th>Obrigatório</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>targetClass</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>ENUM</td>
+<td>Texto livre ou código numerado dos Códigos de Classe Alvo (Tabela 4.5) descrevendo o tipo de tecido ou fundo que está sendo medido. Podem ser usados tanto códigos abreviados quanto códigos completos.</td>
+</tr>
+<tr>
+<td><code>measurementIndex</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>O índice do número de medição é anexado ao nome do arquivo base (Parte 3, Tabela 3.2: IDX) para associar corretamente cada linha de metadados ao seu respectivo arquivo de medição.</td>
+</tr>
+<tr>
+<td><code>herbariumCode</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Acrônimo para herbário ou coleção (código Index Herbariorum).</td>
+</tr>
+<tr>
+<td><code>specimenId</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Identificador único da amostra ou registro.</td>
+</tr>
+<tr>
+<td><code>specimenIdDescription</code></td>
+<td>iHerbSpec v1.2.1 <em>(nome provisório)</em></td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Tipo de identificador único da amostra ou registro.</td>
+</tr>
+<tr>
+<td><code>scientificName</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Nome científico completo no nível de confiança mais baixo.</td>
+</tr>
+<tr>
+<td><code>identificationQualifier</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Incerteza na identificação taxonômica (Darwin Core).</td>
+</tr>
+<tr>
+<td><code>identifiedBy</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Pessoa/grupo que fez a identificação.</td>
+</tr>
+<tr>
+<td><code>dateIdentified</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Data de identificação.</td>
+</tr>
+<tr>
+<td><code>isTempControlled</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>BOOLEAN</td>
+<td>O armazenamento possui controle ativo de temperatura?</td>
+</tr>
+<tr>
+<td><code>annualTempMin</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Temperatura mínima anual de armazenamento (°C).</td>
+</tr>
+<tr>
+<td><code>annualTempMax</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Temperatura máxima anual de armazenamento (°C).</td>
+</tr>
+<tr>
+<td><code>isHumidityControlled</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>BOOLEAN</td>
+<td>O armazenamento possui controle ativo de umidade?</td>
+</tr>
+<tr>
+<td><code>annualHumidityMin</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Umidade relativa mínima anual de armazenamento (%).</td>
+</tr>
+<tr>
+<td><code>annualHumidityMax</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Umidade relativa máxima anual de armazenamento (%).</td>
+</tr>
+<tr>
+<td><code>isMounted</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a1 1 0 0 1 1 1v.88C8.06 4.44 9.5 4 11 4c3 0 3 2 5 2 3 0 4-2 4-2v8s-1 2-4 2-3-2-5-2c-3 0-4 2-4 2v7H5V4a1 1 0 0 1 1-1m1 4.25v4.25S9 10 11 10s3 2 5 2 2-1 2-1V7.5S17 8 16 8c-2 0-3-2-5-2S7 7.25 7 7.25"/></svg></span> <strong>HerbFlow (INPA)</strong></td>
+<td>Opcional</td>
+<td>BOOLEAN</td>
+<td>Campo próprio (não é do protocolo iHerbSpec): a amostra já está montada em exsicata, ou ainda está solta (não costurada na cartolina do herbário)?</td>
+</tr>
+<tr>
+<td><code>targetTissueId</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Índice de caracteres que rastreia as unidades de tecido medidas quando vários tecidos são medidos a partir de uma única amostra (ex.: twig1, twig2).</td>
+</tr>
+<tr>
+<td><code>tissueDevelopmentalStage</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>ENUM</td>
+<td>Estágio de desenvolvimento do tecido, conforme codificado na Tabela 4.4 de Códigos de Classe de Estágio de Desenvolvimento.</td>
+</tr>
+<tr>
+<td><code>hasGlue</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>ENUM</td>
+<td>Verdadeiro/Falso/Incerto: presença de cola na área de medição.</td>
+</tr>
+<tr>
+<td><code>hasNonGlueContamination</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>ENUM</td>
+<td>Valores verdadeiros, falsos ou incertos que indicam a presença de um contaminante diferente de cola na área de medição.</td>
+</tr>
+<tr>
+<td><code>tissueNotes</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Texto livre para observações adicionais sobre a condição da amostra que possam auxiliar na interpretação dos dados espectrais.</td>
+</tr>
+<tr>
+<td><code>tissueLocation</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT (coordenadas)</td>
+<td>Localização do tecido alvo na lâmina de herbário — coordenada X,Y em centímetros, com 0,0 no canto superior esquerdo.</td>
+</tr>
+<tr>
+<td><code>backgroundClass</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>ENUM</td>
+<td>Código abreviado enumerado da Tabela 4.7 de Códigos de Classe de Fundo, descrevendo o tipo de fundo usado atrás do tecido alvo.</td>
+</tr>
+<tr>
+<td><code>hasLowReflectanceBackground</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>BOOLEAN</td>
+<td>Verdadeiro ou falso: a afirmação de que o fundo possui baixa refletância (menos de 4% em toda a faixa espectral do instrumento) é falsa.</td>
+</tr>
+<tr>
+<td><code>backgroundDescription</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Descrição do material de fundo preto ou de outra cor, incluindo fabricante/produto quando disponível.</td>
+</tr>
+<tr>
+<td><code>hasBackgroundInMeasurement</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>BOOLEAN</td>
+<td>Indica que o tecido alvo não cobre toda a área de medição e que o fundo faz parte da medição.</td>
+</tr>
+<tr>
+<td><code>percentBackgroundInMeasurement</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>INTEGER</td>
+<td>Estimativa numérica da porcentagem da área de medição correspondente ao material de fundo.</td>
+</tr>
+<tr>
+<td><code>measurementFlags</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>ENUM</td>
+<td>Descritores categóricos padronizados da condição do tecido (Tabela 4.6); múltiplos valores separados por uma barra vertical (<code>|</code>).</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Texto livre para quaisquer notas adicionais relevantes à medição.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="campos-preenchidos-automaticamente-sessao-geracao-de-nome">Campos preenchidos automaticamente (sessão + geração de nome)<a class="headerlink" href="#campos-preenchidos-automaticamente-sessao-geracao-de-nome" title="Permanent link">&para;</a></h2>
+<p>Estes campos não variam por linha — 14 deles vêm de um valor único,
+definido uma vez em <strong>Configurar Sessão/Instrumento</strong> e copiado
+automaticamente para todas as linhas. A exceção é <code>filename_prefix</code>
+(marcada abaixo): esse é <strong>calculado por linha</strong>, não copiado da
+configuração — ver nota ao final da tabela.</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Protocolo</th>
+<th>Obrigatório</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>instrumentName</code></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a1 1 0 0 1 1 1v.88C8.06 4.44 9.5 4 11 4c3 0 3 2 5 2 3 0 4-2 4-2v8s-1 2-4 2-3-2-5-2c-3 0-4 2-4 2v7H5V4a1 1 0 0 1 1-1m1 4.25v4.25S9 10 11 10s3 2 5 2 2-1 2-1V7.5S17 8 16 8c-2 0-3-2-5-2S7 7.25 7 7.25"/></svg></span> <strong>HerbFlow (INPA)</strong></td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Nome/identificador do instrumento configurado para a sessão.</td>
+</tr>
+<tr>
+<td><code>projectId</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Identificador único para o projeto de medição espectral.</td>
+</tr>
+<tr>
+<td><code>sessionId</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Identificador único para uma sessão de medição, gerado no formato AAAAMMDDHHMM.</td>
+</tr>
+<tr>
+<td><code>operator</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Nome(s) da(s) pessoa(s) que realizaram as medições.</td>
+</tr>
+<tr>
+<td><code>instrumentModel</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Nome do modelo do espectrômetro.</td>
+</tr>
+<tr>
+<td><code>instrumentSerialNumber</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Número de série do espectrômetro.</td>
+</tr>
+<tr>
+<td><code>opticalSetupDescription</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Descrição da configuração da sonda óptica.</td>
+</tr>
+<tr>
+<td><code>measurementSettings</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Configurações do instrumento para as medições.</td>
+</tr>
+<tr>
+<td><code>whiteReferenceDescription</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Material da referência branca.</td>
+</tr>
+<tr>
+<td><code>lightSourceType</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>TEXT</td>
+<td>Fonte de luz para a configuração óptica.</td>
+</tr>
+<tr>
+<td><code>distanceTargetToSensor</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Distância (mm) entre o tecido alvo e a face do sensor.</td>
+</tr>
+<tr>
+<td><code>lensFieldOfView</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Ângulo (graus) do campo de visão do sensor.</td>
+</tr>
+<tr>
+<td><code>angleLightToSensor</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Ângulo (graus) da fonte de luz em relação ao sensor.</td>
+</tr>
+<tr>
+<td><code>measurementAreaDiameter</code></td>
+<td>iHerbSpec v1.2.1</td>
+<td>Opcional</td>
+<td>NUMERIC</td>
+<td>Diâmetro (mm) da área do tecido iluminado.</td>
+</tr>
+<tr>
+<td><code>filename_prefix</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 6.7 1.45 3.85L17.3 12l-3.85 1.45L12 17.3l-1.45-3.85L6.7 12l3.85-1.45zM12 1 9 9l-8 3 8 3 3 8 3-8 8-3-8-3z"/></svg></span></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 3a1 1 0 0 1 1 1v.88C8.06 4.44 9.5 4 11 4c3 0 3 2 5 2 3 0 4-2 4-2v8s-1 2-4 2-3-2-5-2c-3 0-4 2-4 2v7H5V4a1 1 0 0 1 1-1m1 4.25v4.25S9 10 11 10s3 2 5 2 2-1 2-1V7.5S17 8 16 8c-2 0-3-2-5-2S7 7.25 7 7.25"/></svg></span> <strong>HerbFlow (INPA)</strong></td>
+<td>Obrigatório</td>
+<td>TEXT</td>
+<td>Prefixo <strong>interno</strong> que cria o vínculo (busca reversa) entre a linha de metadados e os arquivos físicos gerados pelo equipamento. <strong>Não</strong> é o nome de arquivo final do protocolo iHerbSpec — esse é construído depois, na saída do gerador de artefato (ver <a href="../../coleta/correspondencia-arquivos/">Correspondência entre planilha e leituras</a>).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 6.7 1.45 3.85L17.3 12l-3.85 1.45L12 17.3l-1.45-3.85L6.7 12l3.85-1.45zM12 1 9 9l-8 3 8 3 3 8 3-8 8-3-8-3z"/></svg></span> <code>filename_prefix</code> é calculado, não copiado</p>
+<p>Diferente dos outros 14 campos desta tabela, <code>filename_prefix</code> é
+recalculado <strong>a cada linha</strong>, a partir do espécime/classe/índice daquela
+leitura específica — nunca é um valor fixo copiado da tela de
+Configuração.</p>
+</div>
+<h2 id="o-que-e-campo-do-protocolo-e-o-que-e-proprio-do-herbflow">O que é campo do protocolo e o que é próprio do HerbFlow<a class="headerlink" href="#o-que-e-campo-do-protocolo-e-o-que-e-proprio-do-herbflow" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>iHerbSpec v1.2.1</strong> — vem do protocolo oficial, extraído diretamente da
+  planilha de referência usada pelos testers do projeto.</li>
+<li><strong>HerbFlow (INPA)</strong> — campo que este projeto adicionou por necessidade
+  prática, sem existir (ainda) no protocolo oficial: <code>filename_prefix</code>
+  (chave de busca interna), <code>instrumentName</code> (rótulo do instrumento) e
+  <code>isMounted</code> (se a exsicata já está montada).</li>
+<li><strong><code>specimenIdDescription</code></strong> é um caso intermediário: nasceu de feedback de
+  campo e reflete um qualificador que o próprio protocolo está considerando
+  — o nome ainda pode mudar numa revisão futura do iHerbSpec.</li>
+</ul>
+<h2 id="novidades-recentes">Novidades recentes<a class="headerlink" href="#novidades-recentes" title="Permanent link">&para;</a></h2>
+<p>Registro rápido do que mudou desde a primeira versão do template, para quem
+já usou a planilha antes:</p>
+<ul>
+<li><strong><code>isMounted</code></strong> e o código de tecido <strong><code>TG</code> (Twig/Galho)</strong> são campos
+  novos, adicionados a partir de feedback de coleta real.</li>
+<li><strong><code>specimenIdDescription</code></strong> é o nome atual do campo que já foi chamado de
+  <code>specimenIdType</code> — mesmo significado, só o rótulo mudou.</li>
+<li><strong><code>referenceSerialNumber</code></strong> (serial do padrão de referência calibrado) foi
+  removido temporariamente do template — não é um campo esperado no momento.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../pasta-de-leituras/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: A pasta de leituras (readings/)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                A pasta de leituras (readings/)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../coleta/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Visão geral">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Visão geral
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/nav-zones.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo: planilha, coleta em campo, pasta de leituras, gerador de artefato, duas pastas de saida">
+  <defs>
+    <marker id="arrow-fluxo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b9bc3"/>
+    </marker>
+  </defs>
+  <style>
+    .box { fill: #f8fafb; stroke: #6b9bc3; stroke-width: 2; }
+    .label { font-family: -apple-system, Segoe UI, Arial, sans-serif; font-size: 15px; fill: #222; text-anchor: middle; }
+    .label-sm { font-family: -apple-system, Segoe UI, Arial, sans-serif; font-size: 12px; fill: #222; text-anchor: middle; }
+    .arrow { stroke: #6b9bc3; stroke-width: 2; fill: none; marker-end: url(#arrow-fluxo); }
+  </style>
+
+  <rect class="box" x="10" y="90" width="150" height="70" rx="10"/>
+  <text class="label" x="85" y="120">Planilha</text>
+  <text class="label" x="85" y="140">(Excel)</text>
+
+  <rect class="box" x="210" y="90" width="150" height="70" rx="10"/>
+  <text class="label" x="285" y="120">Coleta</text>
+  <text class="label" x="285" y="140">em campo</text>
+
+  <rect class="box" x="410" y="90" width="150" height="70" rx="10"/>
+  <text class="label" x="485" y="120">Pasta</text>
+  <text class="label" x="485" y="140">readings/</text>
+
+  <rect class="box" x="610" y="90" width="150" height="70" rx="10"/>
+  <text class="label" x="685" y="115">Gerador de</text>
+  <text class="label" x="685" y="135">artefato</text>
+  <text class="label-sm" x="685" y="152">(.exe)</text>
+
+  <path class="arrow" d="M160,125 L205,125"/>
+  <path class="arrow" d="M360,125 L405,125"/>
+  <path class="arrow" d="M560,125 L605,125"/>
+
+  <path class="arrow" d="M685,160 L685,190 L580,190 L580,208"/>
+  <path class="arrow" d="M685,160 L685,190 L790,190 L790,208"/>
+
+  <rect class="box" x="505" y="210" width="150" height="45" rx="8"/>
+  <text class="label-sm" x="580" y="237">Artefato bruto (pasta)</text>
+
+  <rect class="box" x="715" y="210" width="150" height="45" rx="8"/>
+  <text class="label-sm" x="790" y="237">Artefato limpo (pasta)</text>
+</svg>

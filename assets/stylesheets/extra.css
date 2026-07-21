@@ -1,0 +1,199 @@
+/* =========================================================================
+   Estilos próprios do guia herbflow
+   Carregado via `extra_css` em mkdocs.yml (herdado por mkdocs.release.yml).
+   Só CSS -- funciona igual online e offline (file://).
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   0. Paleta verde floresta (decisão de 2026-07-19)
+      mkdocs.yml usa primary/accent: green (chaves válidas do Material) --
+      aqui sobrescrevemos os valores de cor de verdade, mais escuros/terrosos
+      que o verde padrão do tema. Vale em claro e escuro (mesmo seletor,
+      sem qualificar por data-md-color-scheme -- só o link em modo escuro
+      precisa de um tom à parte, ver o último bloco).
+   ------------------------------------------------------------------------- */
+[data-md-color-primary="green"] {
+  --md-primary-fg-color: #2f5233;
+  --md-primary-fg-color--light: #4c7a52;
+  --md-primary-fg-color--dark: #1f3a22;
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+[data-md-color-accent="green"] {
+  --md-accent-fg-color: #52b788;
+  --md-accent-fg-color--transparent: #52b78826;
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: #ffffffb3;
+}
+/* Em modo escuro o Material usa uma variável própria pra cor de link (mais
+   clara que a fg-color, pra manter contraste no fundo escuro). */
+[data-md-color-scheme="slate"][data-md-color-primary="green"] {
+  --md-typeset-a-color: #74c69d;
+}
+
+/* -------------------------------------------------------------------------
+   1. Banner "em desenvolvimento" (announce bar) -- ver overrides/main.html
+   ------------------------------------------------------------------------- */
+/* Âmbar queimado: lê como "aviso/beta", contrasta de propósito com o verde
+   do cabeçalho logo abaixo -- os dois nunca deveriam se confundir. */
+.md-banner {
+  background-color: #9a5b00;
+  color: #fff;
+}
+.dev-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem 0.6rem;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+.dev-banner__tag {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 0.05rem 0.4rem;
+  border-radius: 0.2rem;
+  margin-right: 0.3rem;
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------
+   2. Cabeçalho principal -- seletor de idioma (extra.alternate nativo, ver
+      overrides/partials/alternate.html) + redução da margem pro conteúdo
+   ------------------------------------------------------------------------- */
+
+/* Item desabilitado no submenu de idioma (en/es/fr -- "em breve") */
+.md-select__link--disabled {
+  color: var(--md-default-fg-color--light);
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+/* Idioma ativo (só pt-BR por ora) em negrito, pra ficar claro qual está selecionado */
+.md-select__link--current {
+  font-weight: 700;
+}
+
+/* Espaço entre o cabeçalho fixo e as 3 colunas (nav/conteúdo/índice) --
+   padrão do Material é 1.5rem; pedido do mantenedor pra deixar mais compacto. */
+.md-main__inner {
+  margin-top: 0.6rem;
+}
+
+/* Margem à direita do menu lateral (sidebar primária), pra não ficar colado
+   na barra de rolagem quando ela aparece (telas mais baixas/conteúdo do menu
+   maior que a viewport) -- pedido do mantenedor, sutil de propósito. Sem
+   padding por padrão no tema (`.md-sidebar__inner{padding:0}`), então não
+   soma com nada existente. Só a sidebar PRIMÁRIA (nav) -- a secundária
+   (índice da página) não tem essa queixa. */
+.md-sidebar--primary .md-sidebar__inner {
+  padding-right: 0.4rem;
+}
+
+/* -------------------------------------------------------------------------
+   3. Zonas do menu lateral -- rótulo + destaque inseridos por nav-zones.js
+      (topo: entrada · fluxo: 1-4 seguidos na ordem · resto: páginas soltas)
+   ------------------------------------------------------------------------- */
+
+/* Cabeçalho da zona do fluxo: chip colorido, fundido ao primeiro passo
+   (cantos de baixo retos -- o passo 1 continua o mesmo "card"). Revisão de
+   2026-07-21: voltamos pro card único (o mantenedor preferiu -- comunica
+   melhor "é um fluxo só" do que blocos soltos), mas com padding generoso
+   DENTRO de cada link (não na largura da <li>, que também empurraria os
+   filhos) para não repetir o efeito compactado/desalinhado da primeira
+   versão colada. */
+.md-nav__item.nav-zonelabel {
+  margin: 0.9rem 0 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.55rem 0.55rem 0 0;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-size: 0.64rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+.md-nav__item.nav-zonelabel::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+.md-nav__item.nav-zonelabel .nav-zonelabel__hint {
+  display: block;
+  margin-top: 0.15rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.6rem;
+  opacity: 0.9;
+}
+
+/* Os 4 passos formam UM card contínuo com o rótulo acima: mesmo fundo, borda
+   lateral fina compartilhada, uma linha fina separando cada passo do
+   seguinte (divisor, não um vão) e só o último fecha o card embaixo. Cor de
+   trilho à esquerda distinta por passo -- ver .nav-flow-1..4. */
+.md-nav__item.nav-flow {
+  background: var(--md-code-bg-color);
+  border-left: 3px solid var(--md-primary-fg-color);
+  border-right: 1px solid var(--md-default-fg-color--lightest);
+  margin: 0;
+}
+.md-nav__item.nav-flow + .md-nav__item.nav-flow {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-nav__item.nav-flow.nav-flow--last {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom-left-radius: 0.55rem;
+  border-bottom-right-radius: 0.55rem;
+  margin-bottom: 0.7rem; /* respiro antes do bloco de páginas soltas, fora do card */
+}
+
+/* Espaçamento/alinhamento de verdade fica no LINK/LABEL de cada passo, não
+   na <li> -- assim as páginas-filhas (indentadas mais à direita) não herdam
+   esse padding extra. `padding-left: 0.72rem` alinha o texto com o mesmo
+   ponto de partida do rótulo "O FLUXO" acima (que não tem borda esquerda,
+   só padding) -- 0.72rem aqui + 3px de borda ≈ 0.75rem do rótulo. */
+.md-nav__item.nav-flow > .md-nav__link {
+  align-items: center;
+  margin-top: 0; /* remove o margin-top padrão do Material, que criava respiro desigual */
+  padding: 0.7rem 0.75rem 0.7rem 0.72rem;
+}
+/* Quando o passo está expandido, o padding de baixo do próprio passo fica
+   menor (revisão de 2026-07-21: o mantenedor achou a margem entre "1.
+   Planilha" e seus subitens grande demais) -- só nesse estado, pra manter a
+   linha confortável de clicar quando colapsada. */
+.md-nav__item.nav-flow > input.md-nav__toggle:checked ~ .md-nav__link {
+  padding-bottom: 0.45rem;
+}
+
+/* Cor por passo (decisão de 2026-07-19) -- tons naturais distintos, cada um
+   ainda dentro da mesma família "floresta" do tema, sem destoar. */
+.md-nav__item.nav-flow.nav-flow-1 { border-left-color: #2f5233; } /* 1. Planilha -- verde floresta (== primary) */
+.md-nav__item.nav-flow.nav-flow-2 { border-left-color: #a9762f; } /* 2. Coleta -- âmbar/terra */
+.md-nav__item.nav-flow.nav-flow-3 { border-left-color: #1f6f78; } /* 3. Conversão (Parser) -- teal */
+.md-nav__item.nav-flow.nav-flow-4 { border-left-color: #8b5a2b; } /* 4. Artefato de saída -- terracota */
+
+/* Páginas-filhas expandidas (revisão de 2026-07-21, pedido do mantenedor: as
+   páginas ficavam quase flush com o texto do passo pai, sem indentação
+   visível de hierarquia). Recuo claro à esquerda + padding vertical próprio
+   -- sem bullets (removidos, NÃO reinserir), a indentação já basta. */
+.md-nav__item.nav-flow > .md-nav > .md-nav__list {
+  padding-left: 1.3rem;
+  padding-bottom: 0.25rem;
+}
+.md-nav__item.nav-flow > .md-nav .md-nav__link {
+  align-items: center;
+  margin-top: 0;
+  padding: 0.28rem 0.75rem 0.28rem 0; /* espaçamento entre páginas-filhas mais enxuto (revisão de 2026-07-21) */
+}
+
+/* As páginas depois do fluxo (FAQ, Glossário, etc.) NÃO recebem tratamento
+   especial de propósito -- ficam com a cor normal, iguais às páginas de topo.
+   O único destaque visual do menu é a própria zona do fluxo; o resto é
+   "mais páginas associadas", sem rótulo nem cor esmaecida (decisão de
+   2026-07-19). A margem inferior do último item do fluxo (acima) já dá a
+   separação visual entre o fluxo e essas páginas. */
