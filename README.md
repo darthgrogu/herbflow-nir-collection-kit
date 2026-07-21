@@ -23,11 +23,14 @@ O mesmo guia também vai dentro do pacote de teste, pra consulta offline.
 
 ## ⬇️ Baixe o pacote de teste
 
-**Não é necessário clonar ou baixar o código deste repositório.** Pegue o
-`.zip` mais recente na aba [Releases](../../releases) — ele já traz a
-planilha (`.xlsm`), o gerador de artefato (`.exe`), dois datasets de exemplo
-prontos para testar sem precisar de equipamento, e o guia de uso completo
-(abra o atalho `Guia de Uso.html` na raiz do pacote).
+**Não é necessário clonar ou baixar o código deste repositório.**
+
+**[⬇️ Baixar herbflow-nir-collection-kit-v0.1.0.zip](../../releases/download/v0.1.0/herbflow-nir-collection-kit-v0.1.0.zip)**
+(ou veja todas as versões na aba [Releases](../../releases))
+
+O pacote já traz a planilha (`.xlsm`), o gerador de artefato (`.exe`), dois
+datasets de exemplo prontos para testar sem precisar de equipamento, e o
+guia de uso completo (abra o atalho `Guia de Uso.html` na raiz do pacote).
 
 ## Algo deu errado no seu teste?
 
