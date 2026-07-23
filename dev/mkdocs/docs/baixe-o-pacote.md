@@ -1,9 +1,9 @@
 # Baixe o pacote de teste
 
-!!! tip "Você está lendo a documentação online"
-    Este site sempre mostra a versão mais recente do **guia**. Mas para
+!!! tip "O pacote é baixado à parte do guia"
+    Este guia (online ou dentro do próprio pacote) só documenta o fluxo. Para
     testar de verdade — planilha, gerador de artefato, datasets de exemplo
-    — você precisa do **pacote completo**, baixado à parte.
+    — você precisa do **pacote completo** (`.zip`), baixado pela aba Releases.
 
 ## Baixar
 

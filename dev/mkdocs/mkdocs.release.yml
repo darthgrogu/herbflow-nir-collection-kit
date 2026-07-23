@@ -28,39 +28,15 @@ plugins:
   - search:
       enabled: false
 
-# "Baixe o pacote" só faz sentido pra quem está lendo online e ainda não tem
-# o zip -- dentro do próprio zip já baixado seria circular. exclude_docs
-# tira o arquivo fonte da build inteira (nem gera o .html órfão).
-exclude_docs: |
-  baixe-o-pacote.md
-
-# nav completo redeclarado (INHERIT não faz merge parcial de listas) --
-# igual ao de mkdocs.yml, MENOS a entrada "Baixe o pacote".
-nav:
-  - Introdução: index.md
-  - Comece por aqui: test-drive.md
-  - 1. Planilha (metadados):
-      - Visão geral: planilha/index.md
-      - Requisitos e desbloqueio: planilha/requisitos-desbloqueio.md
-      - Usando o menu: planilha/usando-o-menu.md
-      - A pasta de leituras (readings/): planilha/pasta-de-leituras.md
-      - Dicionário de campos: planilha/dicionario-de-campos.md
-  - 2. Coleta:
-      - Visão geral: coleta/index.md
-      - Correspondência planilha ↔ leituras: coleta/correspondencia-arquivos.md
-      - "Coleta real: iHerbSpec + InnoSpectra + INPA": coleta/exemplo-inpa.md
-  - 3. Conversão (Parser):
-      - Visão geral: parser/index.md
-      - Passo a passo: parser/passo-a-passo.md
-  - 4. Artefato de saída:
-      - Visão geral: saida/index.md
-      - Estrutura de pastas: saida/estrutura-pastas.md
-      - Scripts de importação (Python e R): saida/scripts-de-importacao.md
-      - "Relatório de sucesso (RELATORIO.html)": saida/relatorio-sucesso.md
-      - Relatório de rejeição: saida/relatorio-rejeicao.md
-      - Limitações conhecidas: saida/limitacoes.md
-  - Perguntas frequentes: faq.md
-  - Glossário: glossario.md
-  - Feedback: feedback.md
-  - Notas de versão: changelog.md
-  - Licenciamento: licenca.md
+# nav NÃO é mais redeclarado aqui (revisão de 2026-07-23, ver CLAUDE.md §8.17):
+# desde que "Baixe o pacote" saiu do menu lateral nas DUAS variantes (só o
+# botão do header e o da Introdução linkam a página agora), o nav ficou
+# IDÊNTICO ao de mkdocs.yml -- então esta config apenas o HERDA via INHERIT
+# (omitir a chave `nav` faz o filho usar a do pai). Some a duplicação e a
+# necessidade de manter as duas listas em sincronia: ao editar o nav, mexe
+# só em mkdocs.yml.
+#
+# `baixe-o-pacote.md` continua sendo BUILDADA (não está em exclude_docs, ver
+# §8.15) e alcançável por link direto (hero da Introdução, tip do test-drive),
+# só não aparece no menu lateral -- fica fora do `nav` herdado, gerando um
+# log INFO ("página fora do nav"), não um warning/erro sob --strict.

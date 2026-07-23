@@ -124,14 +124,17 @@ nav:
   # da página). Ícones continuam disponíveis no CONTEÚDO (ex.: os cartões da
   # homepage já usam, ver docs/index.md) via pymdownx.emoji, só não no nav.
   #
-  # Esta lista é DUPLICADA (com uma exceção) em mkdocs.release.yml -- INHERIT
-  # não faz merge parcial de listas, então a variante de release precisa
-  # redeclarar o nav inteiro pra poder omitir "Baixe o pacote" (não faz
-  # sentido dentro do zip já baixado). Ao adicionar/mover página aqui,
-  # replicar lá também.
+  # Este nav é a ÚNICA fonte de verdade -- mkdocs.release.yml não redeclara mais
+  # a lista, só a herda via INHERIT (revisão de 2026-07-23, ver CLAUDE.md §8.17).
+  # Editar aqui basta; não há segunda cópia pra manter em sincronia.
+  #
+  # "Baixe o pacote" NÃO está no menu lateral de propósito (§8.17): virou
+  # recorrente demais. A página `baixe-o-pacote.md` continua existindo e é
+  # alcançável pelo botão do header (banner) e pelo hero da Introdução -- fica
+  # fora do nav (gera só um log INFO, não erro sob --strict).
   - Introdução: index.md
-  - "⬇️ Baixe o pacote": baixe-o-pacote.md
   - Comece por aqui: test-drive.md
+  - Entendendo o fluxo: entendendo-o-fluxo.md
   - 1. Planilha (metadados):
       - Visão geral: planilha/index.md
       - Requisitos e desbloqueio: planilha/requisitos-desbloqueio.md

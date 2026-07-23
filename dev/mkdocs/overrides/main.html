@@ -9,10 +9,22 @@
   Seletor de idioma NÃO mora mais aqui (revisão 2026-07-19, ver §8.8) -- foi
   pro cabeçalho principal, via o mecanismo nativo `extra.alternate` do
   Material (ícone de tradução com submenu) -- ver overrides/partials/alternate.html.
+
+  CTA de download (revisão 2026-07-21, ver §8.14): só aparece na variante
+  ONLINE. `config.use_directory_urls` é `true` no mkdocs.yml normal e
+  `false` no mkdocs.release.yml -- reusado aqui como sinal confiável de
+  "isso é o build de release?" sem precisar de uma chave nova em `extra`.
+  "baixe-o-pacote.md" também EXISTE na release desde 2026-07-23 (ver §8.15
+  -- o botão da Introdução aponta pra ela nas duas variantes), mas o CTA do
+  banner continua só online por ser redundante ali: quem já abriu o zip já
+  tem o pacote em mãos.
 #}
 {% block announce %}
 <div class="dev-banner" role="note">
   <span class="dev-banner__tag">Em desenvolvimento</span>
   Este guia acompanha o <strong>pacote de testes</strong> — guia e pacote ainda estão em construção.
+  {% if config.use_directory_urls %}
+  <a class="dev-banner__cta" href="{{ 'baixe-o-pacote/' | url }}">⬇ Baixar o pacote</a>
+  {% endif %}
 </div>
 {% endblock %}

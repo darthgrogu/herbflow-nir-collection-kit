@@ -1,45 +1,30 @@
-# Introdução
+---
+hide:
+  - navigation
+  - toc
+---
 
-Olá! Este é o guia de uso do **herbflow** — se é sua primeira vez por aqui,
-este guia foi pensado para te acompanhar do início ao fim, sem pressa.
-Qualquer dúvida que aparecer no caminho é normal, e voltar aqui pra
-consultar é exatamente pra isso que o guia existe.
+# herbflow
 
-O **herbflow** reúne duas ferramentas usadas para testar o fluxo de coleta de
-dados espectrais de espécimes de herbário:
+O **herbflow** é um fluxo para coletar dados espectrais de espécimes de
+herbário e transformá-los num artefato padronizado, pronto para arquivar e
+compartilhar. Este pacote é a **primeira forma** desse fluxo — uma planilha e
+um gerador de artefato que você testa em campo.
 
-- **Planilha de coleta** (`herbflow_iHerbSpec.xlsm`) — usada durante a coleta
-  em campo/bancada para registrar os metadados de cada leitura (espécime,
-  sessão, instrumento, tipo de tecido, etc.).
-- **Gerador de artefato** (`iherbspec_parser.exe`) — depois da coleta, junta a
-  planilha preenchida com os arquivos de leitura do equipamento e produz o
-  pacote final de dados, organizado e pronto para arquivar/compartilhar.
+[⬇ Baixar o pacote de teste](baixe-o-pacote.md){ .md-button .md-button--primary }
+[Comece por aqui :octicons-arrow-right-24:](test-drive.md){ .md-button }
 
-O **herbflow** é o fluxo de coleta em si — ele não depende de um protocolo
-específico. Nesta fase de teste usamos o **iHerbSpec (v1.2.1)** como protocolo
-de referência: é o que a planilha preenche e o que o artefato de saída segue
-hoje. O toolkit foi pensado para se adaptar a outros protocolos (outros campos,
-outros formatos de saída), o que será ampliado nos próximos testes.
+<figure markdown="span" class="hero-diagram">
+  ![O mesmo fluxo herbflow em três formatos — planilha e parser (hoje), app mobile e aplicação desktop (em breve) — convergindo para um artefato de protocolo iHerbSpec, compartilhável entre cientistas e herbários](assets/diagrams/diagrama-herbflow-formatos.svg)
+</figure>
 
-!!! note "Isto é um teste de fluxo, não o produto final"
-    O objetivo é testar com pessoas reais em campo se o caminho planilha →
-    coleta → parser funciona bem na prática — qualquer dificuldade ou
-    confusão que você encontrar é exatamente o tipo de feedback que este
-    teste está procurando. O toolkit (e este guia) vai evoluir a partir do
-    que testadores reais relatarem — **qualquer feedback seu é valioso**
-    para o aprimoramento da ferramenta. Ver [Feedback](feedback.md).
-
-As duas ferramentas são **propositalmente independentes (planilha + gerador de artefato/parser)** — você roda a
-planilha primeiro, depois roda o gerador de artefato manualmente, apontando-o
-para os arquivos gerados durante a coleta. Não existe (ainda) comunicação
-automática entre os dois; isso é intencional e faz parte do que este teste
-está avaliando.
+---
 
 ## Por onde começar
 
 <div class="grid cards" markdown>
 
--   :material-rocket-launch-outline:{ .lg .middle } **Comece por aqui**
+-   :material-rocket-launch-outline:{ .lg .middle } **Comece aqui**
 
     ---
 
@@ -48,40 +33,22 @@ está avaliando.
 
     [:octicons-arrow-right-24: Primeiro teste](test-drive.md)
 
--   :material-file-excel-box:{ .lg .middle } **1. Planilha (metadados)**
+-   :material-sitemap-outline:{ .lg .middle } **Entendendo o fluxo**
 
     ---
 
-    Requisitos, desbloqueio do `.xlsm`, o menu e a pasta `readings/`.
+    O que é o herbflow, as duas ferramentas deste pacote e para onde o fluxo
+    está indo.
 
-    [:octicons-arrow-right-24: Ver seção](planilha/index.md)
+    [:octicons-arrow-right-24: Entender o fluxo](entendendo-o-fluxo.md)
 
--   :material-radar:{ .lg .middle } **2. Coleta**
-
-    ---
-
-    Operar o equipamento e salvar as leituras na pasta certa.
-
-    [:octicons-arrow-right-24: Ver seção](coleta/index.md)
-
--   :material-cog-outline:{ .lg .middle } **3. Conversão (Parser)**
+-   :material-message-text-outline:{ .lg .middle } **Feedback**
 
     ---
 
-    Rodar o gerador de artefato, passo a passo.
+    Encontrou um problema ou tem uma sugestão? Qualquer retorno seu é valioso
+    para aprimorar a ferramenta.
 
-    [:octicons-arrow-right-24: Ver seção](parser/index.md)
-
--   :material-package-variant-closed:{ .lg .middle } **4. Artefato de saída**
-
-    ---
-
-    O que o artefato gerado contém, e como ler o relatório.
-
-    [:octicons-arrow-right-24: Ver seção](saida/index.md)
+    [:octicons-arrow-right-24: Enviar feedback](feedback.md)
 
 </div>
-
-Novo por aqui? Comece pela página **[Comece por aqui](test-drive.md)** — ela
-traz a visão geral do fluxo de ponta a ponta e um primeiro teste que você
-roda na hora, com dados de exemplo, sem precisar de equipamento.

@@ -26,7 +26,16 @@ O caminho completo tem 4 etapas, sempre nesta ordem:
 > a informação de uma pra outra (a planilha preenchida + a pasta de leituras).
 > Isso é de propósito nesta fase de teste.
 
+!!! tip "Quer entender o fluxo em detalhe antes?"
+    Esta é a visão rápida, o suficiente para rodar o primeiro teste. Se quiser
+    entender o herbflow a fundo — as duas ferramentas, para onde o fluxo está
+    indo — veja [Entendendo o fluxo](entendendo-o-fluxo.md).
+
 ## Primeiro teste, usando datasets de exemplo
+
+!!! note "Ainda não baixou o pacote?"
+    [Baixe aqui](baixe-o-pacote.md) — você vai precisar dele (planilha, gerador
+    de artefato e os datasets de exemplo) para seguir este primeiro teste.
 
 A pasta `dataset_exemplo/` traz dois datasets reais prontos, um por equipamento
 suportado — dá para testar o gerador de artefato sem precisar coletar nada:
@@ -37,12 +46,19 @@ suportado — dá para testar o gerador de artefato sem precisar coletar nada:
 - **`dataset_exemplo/fieldspec/`** — planilha (`metadata.xlsx`) + leituras
   reais de um segundo equipamento suportado (ASD FieldSpec).
 
+!!! info "Estes datasets servem para testar o fluxo, não como modelo de preenchimento"
+    Eles existem para você ver o **fluxo funcionando** de ponta a ponta — não
+    são referência de **como preencher** a planilha. A forma de preencher
+    (quais campos são obrigatórios ou opcionais, como descrever cada um, entre
+    outros detalhes) varia conforme o **protocolo** e conforme cada **herbário
+    ou grupo de pesquisa**. O objetivo final é sempre o mesmo: um **artefato
+    padronizado**.
+
 !!! warning "Dataset do FieldSpec tem campos placeholder"
-    Alguns campos da planilha de exemplo do FieldSpec são **placeholders**
-    (valores ainda não confirmados): `targetClass`, `backgroundClass`,
-    `instrumentModel`/`instrumentSerialNumber` e `sessionId`. Sirva-se deste
-    dataset só para ver o fluxo funcionando com este equipamento — não como
-    referência de como preencher esses campos numa coleta real.
+    Especificamente no dataset do FieldSpec, alguns campos da planilha ainda
+    são **placeholders** — valores não confirmados: `targetClass`,
+    `backgroundClass`, `instrumentModel`/`instrumentSerialNumber` e
+    `sessionId`.
 
 Passo a passo, com qualquer um dos dois datasets:
 
@@ -55,5 +71,10 @@ Passo a passo, com qualquer um dos dois datasets:
    saída e clique em gerar.
 
 Pronto — você já viu o fluxo completo funcionando antes de fazer sua própria
-coleta. Para entender o que foi gerado, veja
-[Artefato de saída](saida/index.md).
+coleta. A partir daqui, você pode:
+
+- **Explorar o artefato que este teste gerou** — para entender o que sai do
+  fluxo, veja [Artefato de saída](saida/index.md).
+- **Começar uma coleta real** — vá para
+  [1. Planilha (metadados)](planilha/index.md) e comece a estruturar sua
+  própria planilha de metadados e coleta.
