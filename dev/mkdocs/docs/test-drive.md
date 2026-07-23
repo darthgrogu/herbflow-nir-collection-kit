@@ -54,12 +54,6 @@ suportado — dá para testar o gerador de artefato sem precisar coletar nada:
     ou grupo de pesquisa**. O objetivo final é sempre o mesmo: um **artefato
     padronizado**.
 
-!!! warning "Dataset do FieldSpec tem campos placeholder"
-    Especificamente no dataset do FieldSpec, alguns campos da planilha ainda
-    são **placeholders** — valores não confirmados: `targetClass`,
-    `backgroundClass`, `instrumentModel`/`instrumentSerialNumber` e
-    `sessionId`.
-
 Passo a passo, com qualquer um dos dois datasets:
 
 1. Abra `iherbspec_parser.exe`.
