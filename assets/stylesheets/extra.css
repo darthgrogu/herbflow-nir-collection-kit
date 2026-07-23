@@ -60,6 +60,27 @@
   margin-right: 0.3rem;
   white-space: nowrap;
 }
+/* CTA de download no banner (revisão 2026-07-21, ver §8.14) -- só existe na
+   variante online (o Jinja do banner já filtra isso; aqui é só o visual).
+   Pílula branca sobre o fundo âmbar, pra ficar destacada mas sem competir
+   com a cor de aviso do banner em si. */
+.dev-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: #fff;
+  color: #7a4700;
+  font-weight: 700;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dev-banner__cta:hover,
+.dev-banner__cta:focus-visible {
+  background: #fff3e0;
+  color: #5c3600;
+}
 
 /* -------------------------------------------------------------------------
    2. Cabeçalho principal -- seletor de idioma (extra.alternate nativo, ver
@@ -81,6 +102,25 @@
    padrão do Material é 1.5rem; pedido do mantenedor pra deixar mais compacto. */
 .md-main__inner {
   margin-top: 0.6rem;
+}
+
+/* Diagrama-herói da landing (index.md / entendendo-o-fluxo.md). A <figure> do
+   Material é display:table (encolhe pro tamanho intrínseco do SVG, que não tem
+   width/height próprios -- fica minúsculo). Forçamos display:block + largura
+   até um teto pra ele ocupar a coluna sem dominar a página quando a sidebar
+   está oculta na Introdução (front matter `hide: navigation`). */
+/* Seletor qualificado com .md-typeset + type `figure` (especificidade 0,2,1)
+   pra vencer a regra `.md-typeset figure` do próprio Material (0,1,1), que
+   senão sobrescreve display/max-width. */
+.md-typeset figure.hero-diagram {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  margin-inline: auto;
+}
+.md-typeset figure.hero-diagram img {
+  width: 100%;
+  height: auto;
 }
 
 /* Margem à direita do menu lateral (sidebar primária), pra não ficar colado

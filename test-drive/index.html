@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://darthgrogu.github.io/herbflow-nir-collection-kit/test-drive/">
       
       
-        <link rel="prev" href="../baixe-o-pacote/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../planilha/">
+        <link rel="next" href="../entendendo-o-fluxo/">
       
       
         
@@ -96,6 +96,9 @@
 <div class="dev-banner" role="note">
   <span class="dev-banner__tag">Em desenvolvimento</span>
   Este guia acompanha o <strong>pacote de testes</strong> — guia e pacote ainda estão em construção.
+  
+  <a class="dev-banner__cta" href="../baixe-o-pacote/">⬇ Baixar o pacote</a>
+  
 </div>
 
           </div>
@@ -350,33 +353,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../baixe-o-pacote/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ⬇️ Baixe o pacote
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -465,6 +441,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entendendo-o-fluxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entendendo o fluxo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1346,7 +1349,18 @@ exemplo que já vêm no pacote, sem coletar nada e sem precisar de equipamento.<
 a informação de uma pra outra (a planilha preenchida + a pasta de leituras).
 Isso é de propósito nesta fase de teste.</p>
 </blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Quer entender o fluxo em detalhe antes?</p>
+<p>Esta é a visão rápida, o suficiente para rodar o primeiro teste. Se quiser
+entender o herbflow a fundo — as duas ferramentas, para onde o fluxo está
+indo — veja <a href="../entendendo-o-fluxo/">Entendendo o fluxo</a>.</p>
+</div>
 <h2 id="primeiro-teste-usando-datasets-de-exemplo">Primeiro teste, usando datasets de exemplo<a class="headerlink" href="#primeiro-teste-usando-datasets-de-exemplo" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Ainda não baixou o pacote?</p>
+<p><a href="../baixe-o-pacote/">Baixe aqui</a> — você vai precisar dele (planilha, gerador
+de artefato e os datasets de exemplo) para seguir este primeiro teste.</p>
+</div>
 <p>A pasta <code>dataset_exemplo/</code> traz dois datasets reais prontos, um por equipamento
 suportado — dá para testar o gerador de artefato sem precisar coletar nada:</p>
 <ul>
@@ -1356,13 +1370,21 @@ suportado — dá para testar o gerador de artefato sem precisar coletar nada:</
 <li><strong><code>dataset_exemplo/fieldspec/</code></strong> — planilha (<code>metadata.xlsx</code>) + leituras
   reais de um segundo equipamento suportado (ASD FieldSpec).</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Estes datasets servem para testar o fluxo, não como modelo de preenchimento</p>
+<p>Eles existem para você ver o <strong>fluxo funcionando</strong> de ponta a ponta — não
+são referência de <strong>como preencher</strong> a planilha. A forma de preencher
+(quais campos são obrigatórios ou opcionais, como descrever cada um, entre
+outros detalhes) varia conforme o <strong>protocolo</strong> e conforme cada <strong>herbário
+ou grupo de pesquisa</strong>. O objetivo final é sempre o mesmo: um <strong>artefato
+padronizado</strong>.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Dataset do FieldSpec tem campos placeholder</p>
-<p>Alguns campos da planilha de exemplo do FieldSpec são <strong>placeholders</strong>
-(valores ainda não confirmados): <code>targetClass</code>, <code>backgroundClass</code>,
-<code>instrumentModel</code>/<code>instrumentSerialNumber</code> e <code>sessionId</code>. Sirva-se deste
-dataset só para ver o fluxo funcionando com este equipamento — não como
-referência de como preencher esses campos numa coleta real.</p>
+<p>Especificamente no dataset do FieldSpec, alguns campos da planilha ainda
+são <strong>placeholders</strong> — valores não confirmados: <code>targetClass</code>,
+<code>backgroundClass</code>, <code>instrumentModel</code>/<code>instrumentSerialNumber</code> e
+<code>sessionId</code>.</p>
 </div>
 <p>Passo a passo, com qualquer um dos dois datasets:</p>
 <ol>
@@ -1375,8 +1397,14 @@ referência de como preencher esses campos numa coleta real.</p>
    saída e clique em gerar.</li>
 </ol>
 <p>Pronto — você já viu o fluxo completo funcionando antes de fazer sua própria
-coleta. Para entender o que foi gerado, veja
-<a href="../saida/">Artefato de saída</a>.</p>
+coleta. A partir daqui, você pode:</p>
+<ul>
+<li><strong>Explorar o artefato que este teste gerou</strong> — para entender o que sai do
+  fluxo, veja <a href="../saida/">Artefato de saída</a>.</li>
+<li><strong>Começar uma coleta real</strong> — vá para
+  <a href="../planilha/">1. Planilha (metadados)</a> e comece a estruturar sua
+  própria planilha de metadados e coleta.</li>
+</ul>
 
 
 
@@ -1412,7 +1440,7 @@ coleta. Para entender o que foi gerado, veja
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../baixe-o-pacote/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: ⬇️ Baixe o pacote">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introdução">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1422,20 +1450,20 @@ coleta. Para entender o que foi gerado, veja
                 Anterior
               </span>
               <div class="md-ellipsis">
-                ⬇️ Baixe o pacote
+                Introdução
               </div>
             </div>
           </a>
         
         
           
-          <a href="../planilha/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Visão geral">
+          <a href="../entendendo-o-fluxo/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Entendendo o fluxo">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Visão geral
+                Entendendo o fluxo
               </div>
             </div>
             <div class="md-footer__button md-icon">

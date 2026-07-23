@@ -14,7 +14,7 @@
       
       
       
-        <link rel="next" href="baixe-o-pacote/">
+        <link rel="next" href="test-drive/">
       
       
         
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introducao" class="md-skip">
+        <a href="#herbflow" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -94,6 +94,9 @@
 <div class="dev-banner" role="note">
   <span class="dev-banner__tag">Em desenvolvimento</span>
   Este guia acompanha o <strong>pacote de testes</strong> — guia e pacote ainda estão em construção.
+  
+  <a class="dev-banner__cta" href="baixe-o-pacote/">⬇ Baixar o pacote</a>
+  
 </div>
 
           </div>
@@ -285,7 +288,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -409,14 +414,14 @@
   
   
     <li class="md-nav__item">
-      <a href="baixe-o-pacote/" class="md-nav__link">
+      <a href="test-drive/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ⬇️ Baixe o pacote
+    Comece por aqui
   
 
     
@@ -436,14 +441,14 @@
   
   
     <li class="md-nav__item">
-      <a href="test-drive/" class="md-nav__link">
+      <a href="entendendo-o-fluxo/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Comece por aqui
+    Entendendo o fluxo
   
 
     
@@ -1235,7 +1240,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1277,6 +1284,8 @@
               
                 
 
+  
+
 
 
   
@@ -1286,6 +1295,8 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
@@ -1297,79 +1308,43 @@
   
 
 
-<h1 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h1>
-<p>Olá! Este é o guia de uso do <strong>herbflow</strong> — se é sua primeira vez por aqui,
-este guia foi pensado para te acompanhar do início ao fim, sem pressa.
-Qualquer dúvida que aparecer no caminho é normal, e voltar aqui pra
-consultar é exatamente pra isso que o guia existe.</p>
-<p>O <strong>herbflow</strong> reúne duas ferramentas usadas para testar o fluxo de coleta de
-dados espectrais de espécimes de herbário:</p>
-<ul>
-<li><strong>Planilha de coleta</strong> (<code>herbflow_iHerbSpec.xlsm</code>) — usada durante a coleta
-  em campo/bancada para registrar os metadados de cada leitura (espécime,
-  sessão, instrumento, tipo de tecido, etc.).</li>
-<li><strong>Gerador de artefato</strong> (<code>iherbspec_parser.exe</code>) — depois da coleta, junta a
-  planilha preenchida com os arquivos de leitura do equipamento e produz o
-  pacote final de dados, organizado e pronto para arquivar/compartilhar.</li>
-</ul>
-<p>O <strong>herbflow</strong> é o fluxo de coleta em si — ele não depende de um protocolo
-específico. Nesta fase de teste usamos o <strong>iHerbSpec (v1.2.1)</strong> como protocolo
-de referência: é o que a planilha preenche e o que o artefato de saída segue
-hoje. O toolkit foi pensado para se adaptar a outros protocolos (outros campos,
-outros formatos de saída), o que será ampliado nos próximos testes.</p>
-<div class="admonition note">
-<p class="admonition-title">Isto é um teste de fluxo, não o produto final</p>
-<p>O objetivo é testar com pessoas reais em campo se o caminho planilha →
-coleta → parser funciona bem na prática — qualquer dificuldade ou
-confusão que você encontrar é exatamente o tipo de feedback que este
-teste está procurando. O toolkit (e este guia) vai evoluir a partir do
-que testadores reais relatarem — <strong>qualquer feedback seu é valioso</strong>
-para o aprimoramento da ferramenta. Ver <a href="feedback/">Feedback</a>.</p>
-</div>
-<p>As duas ferramentas são <strong>propositalmente independentes (planilha + gerador de artefato/parser)</strong> — você roda a
-planilha primeiro, depois roda o gerador de artefato manualmente, apontando-o
-para os arquivos gerados durante a coleta. Não existe (ainda) comunicação
-automática entre os dois; isso é intencional e faz parte do que este teste
-está avaliando.</p>
+<h1 id="herbflow">herbflow<a class="headerlink" href="#herbflow" title="Permanent link">&para;</a></h1>
+<p>O <strong>herbflow</strong> é um fluxo para coletar dados espectrais de espécimes de
+herbário e transformá-los num artefato padronizado, pronto para arquivar e
+compartilhar. Este pacote é a <strong>primeira forma</strong> desse fluxo — uma planilha e
+um gerador de artefato que você testa em campo.</p>
+<p><a class="md-button md-button--primary" href="baixe-o-pacote/">⬇ Baixar o pacote de teste</a>
+<a class="md-button" href="test-drive/">Comece por aqui <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span></a></p>
+<figure class="hero-diagram">
+  <img alt="O mesmo fluxo herbflow em três formatos — planilha e parser (hoje), app mobile e aplicação desktop (em breve) — convergindo para um artefato de protocolo iHerbSpec, compartilhável entre cientistas e herbários" src="assets/diagrams/diagrama-herbflow-formatos.svg" />
+</figure>
+<hr />
 <h2 id="por-onde-comecar">Por onde começar<a class="headerlink" href="#por-onde-comecar" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M19.22 4c.28 0 .53 0 .74.05.17 1.39-.02 4.25-3.3 7.53-1.7 1.71-3.73 3.02-6.01 3.89l-2.15-2.1c.92-2.31 2.23-4.34 3.92-6.03C15.18 4.58 17.64 4 19.22 4m0-2c-1.98 0-4.98.69-8.22 3.93-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.38.38.89.61 1.42.61.23 0 .47-.06.7-.15A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61S20.7 2 19.22 2m-4.68 7.46c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg></span> <strong>Comece por aqui</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M19.22 4c.28 0 .53 0 .74.05.17 1.39-.02 4.25-3.3 7.53-1.7 1.71-3.73 3.02-6.01 3.89l-2.15-2.1c.92-2.31 2.23-4.34 3.92-6.03C15.18 4.58 17.64 4 19.22 4m0-2c-1.98 0-4.98.69-8.22 3.93-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.38.38.89.61 1.42.61.23 0 .47-.06.7-.15A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61S20.7 2 19.22 2m-4.68 7.46c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg></span> <strong>Comece aqui</strong></p>
 <hr />
 <p>Teste o fluxo inteiro com dados de exemplo prontos — sem coletar nada,
 sem precisar de equipamento.</p>
 <p><a href="test-drive/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Primeiro teste</a></p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.2 17h-2L12 13.2 9.8 17h-2l3.2-5-3.2-5h2l2.2 3.8L14.2 7h2L13 12m6-9H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"/></svg></span> <strong>1. Planilha (metadados)</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg></span> <strong>Entendendo o fluxo</strong></p>
 <hr />
-<p>Requisitos, desbloqueio do <code>.xlsm</code>, o menu e a pasta <code>readings/</code>.</p>
-<p><a href="planilha/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Ver seção</a></p>
+<p>O que é o herbflow, as duas ferramentas deste pacote e para onde o fluxo
+está indo.</p>
+<p><a href="entendendo-o-fluxo/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Entender o fluxo</a></p>
 </li>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 4.93-1.41 1.41A8.01 8.01 0 0 1 20 12a8 8 0 0 1-8 8 8 8 0 0 1-8-8c0-4.08 3.05-7.44 7-7.93v2.02C8.16 6.57 6 9.03 6 12a6 6 0 0 0 6 6 6 6 0 0 0 6-6c0-1.66-.67-3.16-1.76-4.24l-1.41 1.41C15.55 9.9 16 10.9 16 12a4 4 0 0 1-4 4 4 4 0 0 1-4-4c0-1.86 1.28-3.41 3-3.86v2.14c-.6.35-1 .98-1 1.72a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.38-1-1.72V2h-1A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-2.76-1.12-5.26-2.93-7.07"/></svg></span> <strong>2. Coleta</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2zM4 4v13.17L5.17 16H20V4zm2 3h12v2H6zm0 4h9v2H6z"/></svg></span> <strong>Feedback</strong></p>
 <hr />
-<p>Operar o equipamento e salvar as leituras na pasta certa.</p>
-<p><a href="coleta/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Ver seção</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-2 12c-.25 0-.46-.18-.5-.42l-.37-2.65c-.63-.25-1.17-.59-1.69-.99l-2.49 1.01c-.22.08-.49 0-.61-.22l-2-3.46a.493.493 0 0 1 .12-.64l2.11-1.66L4.5 12l.07-1-2.11-1.63a.493.493 0 0 1-.12-.64l2-3.46c.12-.22.39-.31.61-.22l2.49 1c.52-.39 1.06-.73 1.69-.98l.37-2.65c.04-.24.25-.42.5-.42h4c.25 0 .46.18.5.42l.37 2.65c.63.25 1.17.59 1.69.98l2.49-1c.22-.09.49 0 .61.22l2 3.46c.13.22.07.49-.12.64L19.43 11l.07 1-.07 1 2.11 1.63c.19.15.25.42.12.64l-2 3.46c-.12.22-.39.31-.61.22l-2.49-1c-.52.39-1.06.73-1.69.98l-.37 2.65c-.04.24-.25.42-.5.42zm1.25-18-.37 2.61c-1.2.25-2.26.89-3.03 1.78L5.44 7.35l-.75 1.3L6.8 10.2a5.55 5.55 0 0 0 0 3.6l-2.12 1.56.75 1.3 2.43-1.04c.77.88 1.82 1.52 3.01 1.76l.37 2.62h1.52l.37-2.61c1.19-.25 2.24-.89 3.01-1.77l2.43 1.04.75-1.3-2.12-1.55c.4-1.17.4-2.44 0-3.61l2.11-1.55-.75-1.3-2.41 1.04a5.42 5.42 0 0 0-3.03-1.77L12.75 4z"/></svg></span> <strong>3. Conversão (Parser)</strong></p>
-<hr />
-<p>Rodar o gerador de artefato, passo a passo.</p>
-<p><a href="parser/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Ver seção</a></p>
-</li>
-<li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15l-1.89 1.07L16 8.61l1.96-1.11zM6.04 7.5 12 10.85l1.96-1.1-5.88-3.4zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span> <strong>4. Artefato de saída</strong></p>
-<hr />
-<p>O que o artefato gerado contém, e como ler o relatório.</p>
-<p><a href="saida/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Ver seção</a></p>
+<p>Encontrou um problema ou tem uma sugestão? Qualquer retorno seu é valioso
+para aprimorar a ferramenta.</p>
+<p><a href="feedback/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Enviar feedback</a></p>
 </li>
 </ul>
 </div>
-<p>Novo por aqui? Comece pela página <strong><a href="test-drive/">Comece por aqui</a></strong> — ela
-traz a visão geral do fluxo de ponta a ponta e um primeiro teste que você
-roda na hora, com dados de exemplo, sem precisar de equipamento.</p>
 
 
 
@@ -1377,8 +1352,13 @@ roda na hora, com dados de exemplo, sem precisar de equipamento.</p>
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
@@ -1402,17 +1382,19 @@ roda na hora, com dados de exemplo, sem precisar de equipamento.</p>
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
         
           
-          <a href="baixe-o-pacote/" class="md-footer__link md-footer__link--next" aria-label="Próximo: ⬇️ Baixe o pacote">
+          <a href="test-drive/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Comece por aqui">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                ⬇️ Baixe o pacote
+                Comece por aqui
               </div>
             </div>
             <div class="md-footer__button md-icon">
