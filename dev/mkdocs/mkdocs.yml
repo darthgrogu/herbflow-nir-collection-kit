@@ -136,20 +136,26 @@ nav:
   - Comece por aqui: test-drive.md
   - Entendendo o fluxo: entendendo-o-fluxo.md
   - 1. Planilha (metadados):
-      - Visão geral: planilha/index.md
+      # Sem rótulo explícito na visão geral de propósito (revisão de
+      # 2026-07-23, ver CLAUDE.md §8.18): item sem "Label:" faz o MkDocs usar
+      # o H1 da própria página como título -- cada uma tem um H1 distinto
+      # ("Planilha (metadados) — visão geral" etc.), evitando que os botões
+      # Anterior/Próxima do rodapé (que usam esse título, não o rótulo do
+      # nav) mostrem "Visão geral" repetido e sem contexto nas 4 seções.
+      - planilha/index.md
       - Requisitos e desbloqueio: planilha/requisitos-desbloqueio.md
       - Usando o menu: planilha/usando-o-menu.md
       - A pasta de leituras (readings/): planilha/pasta-de-leituras.md
       - Dicionário de campos: planilha/dicionario-de-campos.md
   - 2. Coleta:
-      - Visão geral: coleta/index.md
+      - coleta/index.md
       - Correspondência planilha ↔ leituras: coleta/correspondencia-arquivos.md
       - "Coleta real: iHerbSpec + InnoSpectra + INPA": coleta/exemplo-inpa.md
   - 3. Conversão (Parser):
-      - Visão geral: parser/index.md
+      - parser/index.md
       - Passo a passo: parser/passo-a-passo.md
   - 4. Artefato de saída:
-      - Visão geral: saida/index.md
+      - saida/index.md
       - Estrutura de pastas: saida/estrutura-pastas.md
       - Scripts de importação (Python e R): saida/scripts-de-importacao.md
       - "Relatório de sucesso (RELATORIO.html)": saida/relatorio-sucesso.md
